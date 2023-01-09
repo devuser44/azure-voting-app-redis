@@ -11,6 +11,7 @@ pipeline {
 
         stage('Docker build') {
             steps {
+                echo "user is : $USER"
                 sh 'docker images -a'
                 sh '''cd azure-vote
                 docker images -a
