@@ -23,6 +23,7 @@ pipeline {
 
         stage('Start test app') {
             steps {
+                sh 'docker compose up -d'
                 sh 'chmod +x scripts/test_container.sh'
                 sh './scripts/test_container.sh'
             }
